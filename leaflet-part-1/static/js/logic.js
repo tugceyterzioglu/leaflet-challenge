@@ -12,11 +12,11 @@ function createFeatures(earthquakeData) {
         var magnitude = feature.properties.mag;
         var depth = feature.geometry.coordinates[2];
         L.circleMarker(coords, {
-            radius: magnitude * 3,  // Scale magnitude
-            color: "black",        // Black outline
-            weight: 1,             // Thickness of the outline
-            fillColor: getColor(depth), // Fill color based on depth
-            fillOpacity: 0.7       // Transparency of the fill
+            radius: magnitude * 3,  
+            color: "black",       
+            weight: 1,            
+            fillColor: getColor(depth), 
+            fillOpacity: 0.7       
         }).bindPopup(`
             <h3>${feature.properties.place}</h3><hr>
             <p>Magnitude: ${magnitude}</p>
